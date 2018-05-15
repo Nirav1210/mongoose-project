@@ -17,9 +17,19 @@ function virtualPropTest() {
     console.log(user.fullName)
 }
 
-function InstacneMethodTest() {
+function instacneMethodUsecase() {
     let initials = user.getInitials()
     console.log(initials);
+}
+
+function staticMethodUsecase() {
+    UserModel.getUsers()
+        .then(records => {
+            console.log(records)
+        })
+        .catch(err => {
+            console.error(err)
+        })
 }
 
 function saveData() {
@@ -73,6 +83,10 @@ function deleteRecord() {
     })
 }
 
-
+// saveData();
+// findRecord();
+// updateRecord();
+// deleteRecord();
 // virtualPropTest();
-InstacneMethodTest();
+// instacneMethodUsecase();
+staticMethodUsecase();
